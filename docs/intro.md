@@ -115,9 +115,9 @@ And the cool part Quran Tool provide instant Quran render widget, we will show t
 ### Requirement
 Quran Tool is using static Quran data, you need to downloaded the data first, put it into assets/quran directory, register the asset path into pubspec.yaml the you'll be able to use the tool insyaallah.
 
-1) You can download the tool hare : [this link](/zip/quran.zip)
-2) Put quran directory on ./assets folder of your project
-3) register the asset in pubspec.yaml, as below
+1. You can the data hare, the extract it : [this link](/zip/quran.zip)
+2. Put quran directory on ./assets folder of your project
+3. register the asset in pubspec.yaml, as below
 ```yaml
 assets:
   - assets/quran/
@@ -129,7 +129,7 @@ then the tool is ready to use insyaallah.
 The easy wasy to show Quran to your app user is using [QuranPageReader].
 as easy as bellow instruction.
 
-1) return the Quran page in your page/widget.
+1. return the Quran page in your page/widget.
 ```dart
 class QuranPage extends StatelessWidget {
   const QuranPage({Key? key}) : super(key: key);
@@ -151,11 +151,11 @@ if there is no mistake, Quran data will be processed and showed to user 👍
 then, how to show list of surah and juzs?
 Quran Tool will provide the data for you.
 
-1) Init Quran Tool
+1. Init Quran Tool
 ```dart
 QuranTool quranTool = QuranTool.init();
 ```
-2) get the data
+2. get the data
 ```dart
 QuranJuzs juzs = await quranTool.getQuranJuzs();
 QuranChapters surah = await quranTool.getQuranChapter();
@@ -172,26 +172,26 @@ Book tool actually is tool for showing adzkar and du'a, we named it book because
 Same with Quran Tool, you need to download the Book data first, as this following.
 
 ### Requirement
-1) You can download the tool hare : [this link](/zip/books.zip)
-2) Put quran directory on ./assets folder of your project
-3) register the asset in pubspec.yaml, as below
+1. You can the data hare, the extract it : [this link](/zip/books.zip)
+2. Put quran directory on ./assets folder of your project
+3. register the asset in pubspec.yaml, as below
 ```yaml
 assets:
   - assets/book/
 ```
 
 ### Usage
-1) Init the tool
+1. Init the tool
 ```dart
 BookTool bookTool = BookTool.init();
 ```
-2) Get the data
+2. Get the data
 ```dart
 List<Book> duaBook = await bookTool.getDuaBook();
 List<Book> dzikrBook = await bookTool.getDzikrBook();
 ```
-3) Show doa and dzikr to your user, you can use ListView to render every item.
-4) You can process book detail by your own, or easily with [DzikrReader] as use it as following
+3. Show doa and dzikr to your user, you can use ListView to render every item.
+4. You can process book detail by your own, or easily with [DzikrReader] as use it as following
 ```dart
 class DzikrDetailPage extends StatelessWidget {
   const DzikrDetailPage({Key? key, required this.book}) : super(key: key);
